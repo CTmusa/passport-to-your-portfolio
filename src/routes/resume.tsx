@@ -104,7 +104,7 @@ function Resume() {
       <section className="mx-auto max-w-5xl px-6 py-16 md:px-10">
         <div className="rounded-3xl border border-border/60 bg-card p-8 md:p-14">
           {/* Header */}
-          <header className="border-b border-border/60 pb-8 print-avoid-break">
+          <header className="border-b border-border/60 pb-8">
             <h2 className="font-display text-4xl text-foreground md:text-5xl">Claudia T. Musa</h2>
             <p className="mt-2 text-lg text-muted-foreground">
               Product Manager · SaaS · Lagos, Nigeria
@@ -123,7 +123,7 @@ function Resume() {
           </header>
 
           {/* Summary */}
-          <div className="mt-8 grid gap-8 md:grid-cols-[200px_1fr] print-avoid-break">
+          <div className="mt-8 grid gap-8 md:grid-cols-[200px_1fr]">
             <p className="kicker">Summary</p>
             <p className="text-foreground leading-relaxed">
               Product Manager with 1+ year in SaaS and 3+ years in communications and community
@@ -158,7 +158,7 @@ function Resume() {
           </div>
 
           {/* Skills */}
-          <div className="mt-10 grid gap-8 border-t border-border/60 pt-10 md:grid-cols-[200px_1fr] print-avoid-break">
+          <div className="mt-10 grid gap-8 border-t border-border/60 pt-10 md:grid-cols-[200px_1fr]">
             <p className="kicker">Skills</p>
             <div className="grid gap-5 md:grid-cols-2">
               {Object.entries(skills).map(([group, items]) => (
@@ -173,7 +173,7 @@ function Resume() {
           </div>
 
           {/* Certs */}
-          <div className="mt-10 grid gap-8 border-t border-border/60 pt-10 md:grid-cols-[200px_1fr] print-avoid-break">
+          <div className="mt-10 grid gap-8 border-t border-border/60 pt-10 md:grid-cols-[200px_1fr]">
             <p className="kicker">Certifications</p>
             <ul className="space-y-2 text-sm text-foreground">
               {certs.map((c) => (
