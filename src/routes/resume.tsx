@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Printer, Mail, Linkedin, Phone, MapPin } from "lucide-react";
+import { Download, Mail, Linkedin, Phone, MapPin } from "lucide-react";
 import { Reveal } from "../components/site/Reveal";
 
 export const Route = createFileRoute("/resume")({
@@ -76,21 +76,10 @@ const certs = [
 ];
 
 function Resume() {
-  const handlePrint = () => window.print();
-
   return (
     <>
-      <style>{`
-        @media print {
-          @page { size: A4; margin: 14mm; }
-          header, footer, .no-print { display: none !important; }
-          body { background: white !important; color: black !important; }
-          .print-container { padding: 0 !important; max-width: none !important; }
-          .print-avoid-break { break-inside: avoid; }
-        }
-      `}</style>
 
-      <section className="no-print mx-auto max-w-5xl px-6 pt-16 md:px-10 md:pt-20">
+      <section className="mx-auto max-w-5xl px-6 pt-16 md:px-10 md:pt-20">
         <Reveal className="flex flex-wrap items-end justify-between gap-6">
           <div>
             <p className="kicker">Résumé</p>
@@ -98,20 +87,21 @@ function Resume() {
               The one-page version.
             </h1>
             <p className="mt-4 max-w-xl text-muted-foreground">
-              Print or save this page as a PDF — the layout is optimised for A4.
+              Read the highlights below, or open the full PDF — it opens in a new tab and downloads fine from there.
             </p>
           </div>
-          <button
-            type="button"
-            onClick={handlePrint}
+          <a
+            href="/Claudia_T_Musa_Portfolio.pdf"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm text-background transition-colors hover:bg-accent"
           >
-            <Printer className="size-4" /> Download / Print
-          </button>
+            <Download className="size-4" /> Open / Download PDF
+          </a>
         </Reveal>
       </section>
 
-      <section className="print-container mx-auto max-w-5xl px-6 py-16 md:px-10">
+      <section className="mx-auto max-w-5xl px-6 py-16 md:px-10">
         <div className="rounded-3xl border border-border/60 bg-card p-8 md:p-14">
           {/* Header */}
           <header className="border-b border-border/60 pb-8 print-avoid-break">
