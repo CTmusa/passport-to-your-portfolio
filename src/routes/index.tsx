@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
-import portraitHero from "../assets/portrait-hero.jpg";
 import { Reveal } from "../components/site/Reveal";
 
 export const Route = createFileRoute("/")({
