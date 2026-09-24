@@ -138,7 +138,7 @@ function Resume() {
             <p className="kicker md:sticky md:top-24 md:self-start">Experience</p>
             <div className="space-y-8">
               {experience.map((e) => (
-                <article key={e.role + e.company} className="print-avoid-break">
+                <article key={e.role + e.company}>
                   <div className="flex flex-wrap items-baseline justify-between gap-2">
                     <h3 className="font-display text-xl text-foreground">{e.role}</h3>
                     <span className="text-sm text-muted-foreground">{e.period}</span>
