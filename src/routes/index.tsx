@@ -50,7 +50,7 @@ function Home() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden">
-        <div className="mx-auto grid max-w-6xl gap-12 px-6 pt-16 pb-24 md:grid-cols-[1.2fr_1fr] md:gap-16 md:px-10 md:pt-24 md:pb-32">
+        <div className="mx-auto max-w-6xl px-6 pt-16 pb-24 md:px-10 md:pt-28 md:pb-32">
           <Reveal>
             <p className="kicker">Product Manager · Lagos, Nigeria</p>
             <h1 className="mt-6 font-display text-5xl leading-[1.02] tracking-tight text-foreground md:text-7xl lg:text-[5.5rem]">
@@ -75,22 +75,6 @@ function Home() {
               >
                 Read my story
               </Link>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.15} className="relative">
-            <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-secondary/60 md:-inset-6" />
-            <div className="overflow-hidden rounded-[1.75rem] border border-border/40 shadow-[0_30px_60px_-30px_rgba(42,35,32,0.35)]">
-              <img
-                src={portraitHero}
-                alt="Portrait of Claudia Musa"
-                className="aspect-[4/5] w-full object-cover"
-                loading="eager"
-              />
-            </div>
-            <div className="absolute -bottom-6 -left-6 hidden rounded-2xl border border-border/60 bg-background/95 p-4 shadow-lg backdrop-blur md:block">
-              <p className="kicker">Currently</p>
-              <p className="mt-1 text-sm text-foreground">Open to global PM roles</p>
             </div>
           </Reveal>
         </div>
