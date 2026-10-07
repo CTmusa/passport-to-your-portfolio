@@ -118,6 +118,7 @@ function Home() {
             <Reveal key={f.slug} delay={i * 0.08}>
               <Link
                 to={f.slug === "lawma" ? "/work/lawma" : "/work/softsuite"}
+                aria-label={`Read ${f.title} case study`}
                 className="group block border-t border-border pt-10"
               >
                 <div className="grid gap-6 md:grid-cols-[1fr_2fr] md:gap-16">
@@ -161,13 +162,16 @@ function Home() {
           </Reveal>
           <Reveal delay={0.1} className="space-y-8 text-base leading-relaxed text-muted-foreground md:text-lg">
             <p>
-              Three years in communications taught me to listen before I speak. I bring that habit
-              into every discovery call, every sprint retro, every stakeholder session.
+              My earlier experience in communications and social impact taught me to listen before
+              I speak. I bring that habit
+              into Product Management — in every discovery call, every meeting with team members,
+              and every stakeholder session.
             </p>
             <p>
-              I frame problems in the user's language, translate them into stories engineers can
-              build, and back every launch with numbers we agreed on together. Sprints stay
-              predictable, launches stay small, learning stays continuous.
+              I discover the problems users face, translate them into stories developers can build,
+              and track metrics to understand what's working. I keep listening to feedback and
+              learning from it, so iteration stays continuous and the product keeps getting better
+              for users and the business.
             </p>
             <div className="flex flex-wrap gap-2 pt-4">
               {["Discovery", "Roadmapping", "Scrum facilitation", "User research", "Requirements", "QA", "Stakeholder comms", "MoSCoW · RICE"].map(

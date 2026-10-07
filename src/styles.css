@@ -49,7 +49,7 @@
   /* Warm editorial palette */
   --paper: oklch(0.965 0.014 78);          /* #F7F3EC background */
   --ink: oklch(0.235 0.020 40);            /* #2A2320 espresso */
-  --terracotta: oklch(0.628 0.140 40);     /* #C56A4A */
+  --terracotta: oklch(0.51 0.125 40);      /* Accessible terracotta for text and controls */
   --sage: oklch(0.612 0.043 130);          /* #7A8B6F */
   --sand: oklch(0.895 0.032 75);           /* #E8DBC6 */
   --rule: oklch(0.82 0.02 60);
@@ -126,6 +126,38 @@
     font-family: var(--font-display);
     font-weight: 400;
     letter-spacing: -0.02em;
+  }
+
+  :where(a, button, input, textarea, select, [tabindex]):focus-visible {
+    outline: 3px solid var(--color-ring);
+    outline-offset: 4px;
+    scroll-margin-block: 7rem;
+  }
+
+  main {
+    scroll-margin-top: 7rem;
+  }
+
+  main:focus {
+    outline: none;
+  }
+
+  @media (pointer: coarse) {
+    a:not(.group.block) {
+      min-height: 44px;
+      min-width: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 
   ::selection {

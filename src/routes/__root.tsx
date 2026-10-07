@@ -6,8 +6,10 @@ import {
   useRouter,
   HeadContent,
   Scripts,
+  useLocation,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
+import { Button } from "../components/ui/button";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -16,7 +18,7 @@ import { SiteFooter } from "../components/site/SiteFooter";
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+    <main className="flex min-h-dvh items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <p className="kicker">404</p>
         <h1 className="mt-4 font-display text-5xl text-foreground">Page not found</h1>
@@ -32,7 +34,7 @@ function NotFoundComponent() {
           </Link>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 
@@ -44,14 +46,14 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   }, [error]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+    <main className="flex min-h-dvh items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="font-display text-2xl text-foreground">This page didn't load</h1>
         <p className="mt-2 text-sm text-muted-foreground">
           Something went wrong. Try again or head back home.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
-          <button
+          <Button
             onClick={() => {
               router.invalidate();
               reset();
@@ -59,7 +61,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
             className="inline-flex items-center justify-center rounded-full bg-foreground px-4 py-2 text-sm text-background"
           >
             Try again
-          </button>
+          </Button>
           <a
             href="/"
             className="inline-flex items-center justify-center rounded-full border border-foreground/80 px-4 py-2 text-sm text-foreground"
@@ -68,7 +70,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
           </a>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 
@@ -140,15 +142,33 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useLocation({ select: (location) => location.pathname });
+  const previousPath = useRef(pathname);
+  const [announcement, setAnnouncement] = useState("");
+
+  useEffect(() => {
+    if (previousPath.current === pathname) return;
+    previousPath.current = pathname;
+    const frame = requestAnimationFrame(() => {
+      const main = document.getElementById("main-content");
+      main?.focus({ preventScroll: true });
+      setAnnouncement(main?.querySelector("h1")?.textContent ?? "Page loaded");
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [pathname]);
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="flex min-h-screen flex-col">
+      <div className="flex min-h-dvh flex-col">
+        <a href="#main-content" onClick={() => document.getElementById("main-content")?.focus()} className="sr-only z-50 rounded bg-background px-6 py-3 text-foreground focus:not-sr-only focus:fixed focus:left-4 focus:top-4">
+          Skip to main content
+        </a>
         <SiteNav />
-        <main className="flex-1">
+        <main id="main-content" tabIndex={-1} className="flex-1">
           <Outlet />
         </main>
         <SiteFooter />
+        <div className="sr-only" aria-live="polite" aria-atomic="true">{announcement}</div>
       </div>
     </QueryClientProvider>
   );

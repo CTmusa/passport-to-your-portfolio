@@ -1,6 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
+import { Button } from "../ui/button";
+import { Sheet, SheetTrigger, SheetContent, SheetTitle, SheetClose } from "../ui/sheet";
 
 export function SiteNav() {
   const [open, setOpen] = useState(false);
@@ -24,7 +26,7 @@ export function SiteNav() {
           Claudia<span className="text-accent">.</span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav aria-label="Primary navigation" className="hidden items-center gap-8 md:flex">
           {links.map((l) => (
             <Link
               key={l.to}
@@ -43,29 +45,25 @@ export function SiteNav() {
           </a>
         </nav>
 
-        <button
-          type="button"
-          aria-label={open ? "Close menu" : "Open menu"}
-          onClick={() => setOpen((v) => !v)}
-          className="md:hidden"
-        >
-          {open ? <X className="size-5" /> : <Menu className="size-5" />}
-        </button>
-      </div>
-
-      {open && (
-        <div className="border-t border-border/60 md:hidden">
-          <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-6 py-4">
+        <Sheet open={open} onOpenChange={setOpen}>
+          <SheetTrigger asChild>
+            <Button variant="ghost" size="icon" aria-label="Open navigation menu" className="min-h-11 min-w-11 md:hidden">
+              <Menu aria-hidden="true" className="size-5" />
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="right" aria-describedby={undefined} className="overflow-y-auto">
+            <SheetTitle className="font-display text-2xl">Navigation</SheetTitle>
+          <nav aria-label="Mobile navigation" className="mt-6 flex flex-col gap-2">
             {links.map((l) => (
-              <Link
+              <SheetClose asChild key={l.to}><Link
                 key={l.to}
                 to={l.to}
                 activeOptions={{ exact: l.to === "/" }}
                 onClick={() => setOpen(false)}
-                className="rounded px-2 py-2 text-base text-muted-foreground hover:bg-muted data-[status=active]:text-foreground"
+                className="flex min-h-11 items-center rounded px-2 py-2 text-base text-muted-foreground hover:bg-muted data-[status=active]:text-foreground"
               >
                 {l.label}
-              </Link>
+              </Link></SheetClose>
             ))}
             <a
               href="mailto:claudia.t.musa@gmail.com"
@@ -74,8 +72,9 @@ export function SiteNav() {
               Hire me
             </a>
           </nav>
-        </div>
-      )}
+          </SheetContent>
+        </Sheet>
+      </div>
     </header>
   );
 }
