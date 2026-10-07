@@ -10,13 +10,13 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "How a background in communications and community development shaped Claudia Musa's approach to product management — with a focus on empathy, clear stakeholder communication, and measurable outcomes.",
+          "How Claudia Musa works as a Product Manager — starting with the why, thinking holistically about the user experience, and bringing solutions to life with the team to deliver value for users and the business.",
       },
       { property: "og:title", content: "About — Claudia Musa" },
       {
         property: "og:description",
         content:
-          "Communications-rooted PM building user-centric SaaS in Lagos.",
+          "Product Manager who puts users at the heart of the build — in SaaS, in Lagos, and beyond.",
       },
       { property: "og:url", content: "/about" },
     ],
@@ -61,7 +61,7 @@ function About() {
         <Reveal>
           <p className="kicker">About</p>
           <h1 className="mt-6 max-w-4xl font-display text-5xl leading-[1.05] text-foreground md:text-7xl">
-            From community organizer to product manager — the through-line is people.
+            I do my best work with companies that put their users at the heart of what they do.
           </h1>
         </Reveal>
       </section>
@@ -82,28 +82,25 @@ function About() {
             </div>
             <div>
               <dt className="kicker">Industry</dt>
-              <dd className="mt-2 text-foreground">SaaS · GovTech · HR</dd>
-            </div>
-            <div>
-              <dt className="kicker">Focus</dt>
-              <dd className="mt-2 text-foreground">B2B / B2G products</dd>
+              <dd className="mt-2 text-foreground">SaaS</dd>
             </div>
             <div>
               <dt className="kicker">Availability</dt>
-              <dd className="mt-2 text-foreground">Open to global PM roles</dd>
+              <dd className="mt-2 text-foreground">Open to Product Manager roles</dd>
             </div>
           </dl>
         </Reveal>
 
         <Reveal delay={0.1} className="space-y-6 text-lg leading-relaxed text-muted-foreground">
           <p>
-            I'm a Product Manager with over a year in SaaS, building products that solve real user
-            problems. Before product, I spent more than three years in communications and community
-            development, driving meaningful change with people who don't usually have a seat at the
-            table.
+            I'm a Product Manager with over a year in SaaS, and I look for the same thing in every
+            team I join: people who genuinely care about their users, and put them at the heart of
+            what they do. That care is where good product work starts for me.
           </p>
           <p>
-            That path shapes everything I do now. I lead with user empathy, I write and speak so
+            It shapes how I work. I start with the why, think holistically about the experience,
+            then bring solutions to life side by side with designers, engineers, and stakeholders —
+            so what we ship creates real value for users and for the business. I write and speak so
             that non-technical stakeholders stay in the loop, and I stay calm when a sprint takes an
             unexpected turn. My goal isn't shipping features — it's shipping outcomes we can measure
             and defend.
