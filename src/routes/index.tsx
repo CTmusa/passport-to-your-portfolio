@@ -5,6 +5,8 @@ import { Reveal } from "../components/site/Reveal";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:type", content: "website" },
       { title: "Claudia Musa — Product Manager | Lagos" },
       {
         name: "description",

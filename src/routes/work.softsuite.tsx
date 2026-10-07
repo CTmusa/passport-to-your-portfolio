@@ -5,6 +5,7 @@ import { Reveal } from "../components/site/Reveal";
 export const Route = createFileRoute("/work/softsuite")({
   head: () => ({
     meta: [
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "SoftSuite HR — Case Study by Claudia Musa" },
       {
         name: "description",
@@ -71,8 +72,9 @@ function SoftSuiteCase() {
         <Reveal className="mt-6">
           <a
             href="https://hcm.softsuite.com/sign-up"
+            aria-label="Visit the live SoftSuite HR product (opens in a new tab)"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm text-accent underline underline-offset-4 hover:no-underline"
           >
             Visit the live product <ExternalLink className="size-3.5" />

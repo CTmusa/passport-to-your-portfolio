@@ -5,6 +5,8 @@ import { Reveal } from "../components/site/Reveal";
 export const Route = createFileRoute("/resume")({
   head: () => ({
     meta: [
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:type", content: "website" },
       { title: "Résumé — Claudia Musa, Product Manager" },
       {
         name: "description",
@@ -91,8 +93,9 @@ function Resume() {
           </div>
           <a
             href="/Claudia_T_Musa_Portfolio.pdf"
+            aria-label="Open or download Claudia Musa’s résumé PDF (opens in a new tab)"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm text-background transition-colors hover:bg-accent"
           >
             <Download className="size-4" /> Open / Download PDF
@@ -114,7 +117,7 @@ function Resume() {
               <li className="inline-flex items-center gap-2"><MapPin className="size-3.5" /> Lagos, Nigeria</li>
               <li className="inline-flex items-center gap-2">
                 <Linkedin className="size-3.5" />
-                <a href="https://www.linkedin.com/in/claudia-musa" target="_blank" rel="noreferrer" className="hover:text-accent">
+                <a aria-label="Claudia Musa on LinkedIn (opens in a new tab)" href="https://www.linkedin.com/in/claudia-musa" target="_blank" rel="noopener noreferrer" className="hover:text-accent">
                   linkedin.com/in/claudia-musa
                 </a>
               </li>

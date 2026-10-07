@@ -5,6 +5,7 @@ import { Reveal } from "../components/site/Reveal";
 export const Route = createFileRoute("/work/lawma")({
   head: () => ({
     meta: [
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "LAWMA Billing & Enumeration — Case Study by Claudia Musa" },
       {
         name: "description",
@@ -80,8 +81,9 @@ function LawmaCase() {
         <Reveal className="mt-6">
           <a
             href="https://ebilling.lawma.gov.ng/login"
+            aria-label="Visit the live LAWMA billing product (opens in a new tab)"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm text-accent underline underline-offset-4 hover:no-underline"
           >
             Visit the live product <ExternalLink className="size-3.5" />
