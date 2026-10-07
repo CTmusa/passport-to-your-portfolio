@@ -5,6 +5,8 @@ import { Reveal } from "../components/site/Reveal";
 export const Route = createFileRoute("/work/")({
   head: () => ({
     meta: [
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:type", content: "website" },
       { title: "Work — Claudia Musa" },
       {
         name: "description",
@@ -69,6 +71,7 @@ function Work() {
             <Reveal key={c.to} delay={i * 0.08}>
               <Link
                 to={c.to}
+                aria-label={`Read ${c.title} case study`}
                 className="group block overflow-hidden rounded-3xl border border-border/60 bg-background transition-all hover:border-foreground/40 hover:shadow-[0_20px_60px_-30px_rgba(42,35,32,0.35)]"
               >
                 <div className="grid md:grid-cols-[1.1fr_1.4fr]">
@@ -76,7 +79,7 @@ function Work() {
                     className={`relative flex aspect-[4/3] items-end bg-gradient-to-br p-8 md:aspect-auto md:p-10 ${c.accent}`}
                   >
                     <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)", backgroundSize: "18px 18px" }} />
-                    <p className="relative font-display text-[6rem] leading-none text-background/80 md:text-[9rem]">
+                    <p aria-hidden="true" className="relative font-display text-[6rem] leading-none text-background/80 md:text-[9rem]">
                       {c.n}
                     </p>
                   </div>

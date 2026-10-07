@@ -35,8 +35,9 @@ export function SiteFooter() {
               <Linkedin className="size-3.5" />
               <a
                 href="https://www.linkedin.com/in/claudia-musa"
+                aria-label="Claudia Musa on LinkedIn (opens in a new tab)"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="hover:text-foreground"
               >
                 LinkedIn

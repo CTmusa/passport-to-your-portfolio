@@ -5,6 +5,8 @@ import { Reveal } from "../components/site/Reveal";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:type", content: "website" },
       { title: "Contact — Claudia Musa" },
       {
         name: "description",
@@ -64,12 +66,12 @@ function Contact() {
             const Icon = l.icon;
             const inner = (
               <div className="flex items-center gap-5 py-6">
-                <div className="flex size-11 items-center justify-center rounded-full bg-secondary text-accent">
+                <div className="flex size-11 shrink-0 items-center justify-center rounded-full bg-secondary text-accent">
                   <Icon className="size-5" />
                 </div>
-                <div className="flex-1">
+                <div className="min-w-0 flex-1">
                   <p className="kicker">{l.label}</p>
-                  <p className="mt-1 text-foreground">{l.value}</p>
+                  <p className="mt-1 break-words text-foreground">{l.value}</p>
                 </div>
                 {l.href && (
                   <ArrowUpRight className="size-4 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -81,8 +83,9 @@ function Contact() {
                 {l.href ? (
                   <a
                     href={l.href}
+                    aria-label={`${l.label}: ${l.value}${l.href.startsWith("http") ? " (opens in a new tab)" : ""}`}
                     target={l.href.startsWith("http") ? "_blank" : undefined}
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="group block hover:text-accent"
                   >
                     {inner}

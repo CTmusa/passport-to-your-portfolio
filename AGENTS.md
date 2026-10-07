@@ -8,3 +8,8 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Accessibility architecture
+- Use the shared layout for the skip link, main landmark, route-change focus, and polite page announcements so all content routes share keyboard behavior.
+- Use the existing Radix-based Sheet for mobile navigation so Escape, focus containment, and focus restoration are handled by the accessible primitive.
+- Define focus indicators and reduced-motion behavior centrally, and keep reveal content visible before animation so keyboard targets never start invisible.
