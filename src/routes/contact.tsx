@@ -9,12 +9,12 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Get in touch with Claudia Musa — Product Manager based in Lagos, open to global SaaS PM roles and collaborations.",
+          "Get in touch with Claudia Musa — Product Manager based in Lagos, open to Product Manager roles and collaborations.",
       },
       { property: "og:title", content: "Contact — Claudia Musa" },
       {
         property: "og:description",
-        content: "Say hello — open to global PM roles and collaborations.",
+        content: "Say hello — open to Product Manager roles and collaborations.",
       },
       { property: "og:url", content: "/contact" },
     ],
@@ -39,7 +39,7 @@ function Contact() {
           Let's build something worth measuring.
         </h1>
         <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground">
-          I'm open to global Product Manager roles — full-time, contract, or advisory. I reply to
+          I'm open to Product Manager roles — full-time, contract, or advisory. I reply to
           every message that isn't a cold sales pitch. If you have a product that needs sharper
           focus, tell me about it.
         </p>
