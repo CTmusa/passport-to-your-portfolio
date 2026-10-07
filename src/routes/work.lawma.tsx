@@ -9,7 +9,7 @@ export const Route = createFileRoute("/work/lawma")({
       {
         name: "description",
         content:
-          "How I owned the Lagos State Waste Management Authority billing platform end-to-end — pilot launch that generated ₦20M+ in three months and enumerated 300+ estates.",
+          "How I owned the Lagos State Waste Management Authority billing platform end-to-end — pilot launch that generated ₦20M+ in three months and enumerated 300+ facilities.",
       },
       { property: "og:title", content: "LAWMA Billing & Enumeration — Case Study" },
       {
@@ -34,9 +34,8 @@ const problems = [
 
 const outcomes = [
   { k: "₦20M+", v: "Revenue generated in the first 3 months of the pilot." },
-  { k: "300+", v: "Estates enumerated to power accurate automated billing." },
+  { k: "300+", v: "Facilities enumerated to power accurate automated billing." },
   { k: "15+", v: "LAWMA staff, regional heads, and PSP owners trained on the admin." },
-  { k: "100+", v: "Customer feedback calls conducted with the Ops team." },
   { k: "50%", v: "Reduction in manual billing cost and delay after automation." },
   { k: "3", v: "PSPs onboarded in the pilot launch." },
 ];
@@ -164,7 +163,7 @@ function LawmaCase() {
             },
             {
               h: "Redevelopment of the Enumeration Portal.",
-              b: "Led the rebuild that let field teams enumerate 300+ estates and feed clean data into the billing engine.",
+              b: "Led the rebuild that let field teams enumerate 300+ facilities and feed clean data into the billing engine.",
             },
             {
               h: "QA, training, and adoption after launch.",

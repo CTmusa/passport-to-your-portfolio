@@ -30,11 +30,10 @@ const experience = [
     period: "2023 – Present",
     points: [
       "Owned the LAWMA billing platform end-to-end; pilot launched April 2024 with three PSPs, generating ₦20M+ in the first three months.",
-      "Led redevelopment of the Enumeration Portal, enabling accurate data capture for 300+ estates.",
+      "Led redevelopment of the Enumeration Portal, enabling accurate data capture for 300+ facilities.",
       "Coordinated delivery of the LAWMA Customer Portal MVP ('Pay Without Sign-In').",
       "Trained 15+ finance staff, regional heads, and PSP owners on admin operations.",
       "Reduced manual billing cost and delay by 50% via automation.",
-      "Ran 100+ customer feedback calls with the Ops team to fuel continuous improvement.",
     ],
   },
   {

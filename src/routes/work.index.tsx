@@ -30,8 +30,8 @@ const cases = [
     kicker: "GovTech · Billing SaaS · 2024",
     title: "LAWMA Billing & Enumeration",
     blurb:
-      "Owned the billing platform end-to-end for Lagos State Waste Management Authority — from stakeholder discovery through pilot launch, unlocking ₦20M+ in the first three months and enumerating 300+ estates.",
-    metrics: ["₦20M+ revenue", "300+ estates", "50% cost cut"],
+      "Owned the billing platform end-to-end for Lagos State Waste Management Authority — from stakeholder discovery through pilot launch, unlocking ₦20M+ in the first three months and enumerating 300+ facilities.",
+    metrics: ["₦20M+ revenue", "300+ facilities", "50% cost cut"],
     accent: "from-terracotta/80 via-terracotta/40 to-sand",
   },
   {

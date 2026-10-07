@@ -81,11 +81,10 @@ function Home() {
 
         {/* metric ticker */}
         <div className="border-y border-border/60 bg-background">
-          <div className="mx-auto grid max-w-6xl grid-cols-2 divide-x divide-border/60 px-6 md:grid-cols-4 md:px-10">
+          <div className="mx-auto grid max-w-6xl grid-cols-1 divide-y divide-border/60 px-6 md:grid-cols-3 md:divide-x md:divide-y-0 md:px-10">
             {[
-              { k: "₦20M+", v: "Revenue in 3 months" },
-              { k: "300+", v: "Estates enumerated" },
-              { k: "100+", v: "User interviews" },
+              { k: "₦20M+", v: "Revenue in the first 3 months" },
+              { k: "300+", v: "Facilities enumerated" },
               { k: "50%", v: "Billing cost cut" },
             ].map((m) => (
               <div key={m.k} className="px-4 py-8 md:px-6 md:py-10">
