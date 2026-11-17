@@ -1,11 +1,12 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Menu } from "lucide-react";
 import { Button } from "../ui/button";
 import { Sheet, SheetTrigger, SheetContent, SheetTitle, SheetClose } from "../ui/sheet";
 
 export function SiteNav() {
   const [open, setOpen] = useState(false);
+  const navigating = useRef(false);
 
   const links = [
     { to: "/", label: "Home" },
@@ -51,7 +52,12 @@ export function SiteNav() {
               <Menu aria-hidden="true" className="size-5" />
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" aria-describedby={undefined} className="overflow-y-auto">
+          <SheetContent side="right" aria-describedby={undefined} className="overflow-y-auto" onCloseAutoFocus={(event) => {
+            if (!navigating.current) return;
+            event.preventDefault();
+            navigating.current = false;
+            document.getElementById("main-content")?.focus({ preventScroll: true });
+          }}>
             <SheetTitle className="font-display text-2xl">Navigation</SheetTitle>
           <nav aria-label="Mobile navigation" className="mt-6 flex flex-col gap-2">
             {links.map((l) => (
@@ -59,7 +65,10 @@ export function SiteNav() {
                 key={l.to}
                 to={l.to}
                 activeOptions={{ exact: l.to === "/" }}
-                onClick={() => setOpen(false)}
+                onClick={() => {
+                  navigating.current = true;
+                  setOpen(false);
+                }}
                 className="flex min-h-11 items-center rounded px-2 py-2 text-base text-muted-foreground hover:bg-muted data-[status=active]:text-foreground"
               >
                 {l.label}
