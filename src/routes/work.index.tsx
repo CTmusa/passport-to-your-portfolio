@@ -11,7 +11,7 @@ export const Route = createFileRoute("/work/")({
       {
         name: "description",
         content:
-          "Selected product management case studies by Claudia Musa: LAWMA's billing platform and SoftSuite HR — outcomes, process, and measurable results.",
+          "Selected product management case studies by Claudia Musa: LAWMA billing, SoftSuite HR, and GBV Tete-a-Tete — product delivery, accessibility, and outcomes.",
       },
       { property: "og:title", content: "Work — Claudia Musa" },
       {
@@ -46,6 +46,15 @@ const cases = [
     metrics: ["20% fewer bugs", "MVP shipped", "Admin manual"],
     accent: "from-sage/80 via-sage/40 to-sand",
   },
+  {
+    to: "/work/gbv" as const,
+    n: "03",
+    kicker: "Social impact · Mobile · Version 2",
+    title: "GBV Tete-a-Tete",
+    blurb: "Managed the second build of CEWHIN’s GBV-support platform, translating user discovery into accessibility improvements, more reliable chat, and coordinated delivery for Android and iOS.",
+    metrics: ["Android & iOS", "Screen-reader support", "Chat improvements"],
+    accent: "from-sage/80 via-sage/40 to-sand",
+  },
 ] as const;
 
 function Work() {
@@ -55,7 +64,7 @@ function Work() {
         <Reveal>
           <p className="kicker">Selected case studies</p>
           <h1 className="mt-6 max-w-4xl font-display text-5xl leading-[1.05] text-foreground md:text-7xl">
-            Two products. Real users. Numbers we can point at.
+            Real products. Real users. Meaningful outcomes.
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             Each case study walks through the problem, the role I played, the process, and the

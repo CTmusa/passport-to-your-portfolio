@@ -9,22 +9,18 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as ResumeRouteImport } from './routes/resume'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ResumeRouteImport } from './routes/resume'
 import { Route as WorkIndexRouteImport } from './routes/work.index'
-import { Route as WorkSoftsuiteRouteImport } from './routes/work.softsuite'
+import { Route as WorkGbvRouteImport } from './routes/work.gbv'
 import { Route as WorkLawmaRouteImport } from './routes/work.lawma'
+import { Route as WorkSoftsuiteRouteImport } from './routes/work.softsuite'
 
-const ResumeRoute = ResumeRouteImport.update({
-  id: '/resume',
-  path: '/resume',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -32,9 +28,14 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResumeRoute = ResumeRouteImport.update({
+  id: '/resume',
+  path: '/resume',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WorkIndexRoute = WorkIndexRouteImport.update({
@@ -42,14 +43,19 @@ const WorkIndexRoute = WorkIndexRouteImport.update({
   path: '/work/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const WorkSoftsuiteRoute = WorkSoftsuiteRouteImport.update({
-  id: '/work/softsuite',
-  path: '/work/softsuite',
+const WorkGbvRoute = WorkGbvRouteImport.update({
+  id: '/work/gbv',
+  path: '/work/gbv',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WorkLawmaRoute = WorkLawmaRouteImport.update({
   id: '/work/lawma',
   path: '/work/lawma',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WorkSoftsuiteRoute = WorkSoftsuiteRouteImport.update({
+  id: '/work/softsuite',
+  path: '/work/softsuite',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -58,6 +64,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/resume': typeof ResumeRoute
+  '/work/gbv': typeof WorkGbvRoute
   '/work/lawma': typeof WorkLawmaRoute
   '/work/softsuite': typeof WorkSoftsuiteRoute
   '/work/': typeof WorkIndexRoute
@@ -67,6 +74,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/resume': typeof ResumeRoute
+  '/work/gbv': typeof WorkGbvRoute
   '/work/lawma': typeof WorkLawmaRoute
   '/work/softsuite': typeof WorkSoftsuiteRoute
   '/work': typeof WorkIndexRoute
@@ -77,6 +85,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/resume': typeof ResumeRoute
+  '/work/gbv': typeof WorkGbvRoute
   '/work/lawma': typeof WorkLawmaRoute
   '/work/softsuite': typeof WorkSoftsuiteRoute
   '/work/': typeof WorkIndexRoute
@@ -88,6 +97,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/resume'
+    | '/work/gbv'
     | '/work/lawma'
     | '/work/softsuite'
     | '/work/'
@@ -97,6 +107,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/resume'
+    | '/work/gbv'
     | '/work/lawma'
     | '/work/softsuite'
     | '/work'
@@ -106,6 +117,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/resume'
+    | '/work/gbv'
     | '/work/lawma'
     | '/work/softsuite'
     | '/work/'
@@ -116,6 +128,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   ResumeRoute: typeof ResumeRoute
+  WorkGbvRoute: typeof WorkGbvRoute
   WorkLawmaRoute: typeof WorkLawmaRoute
   WorkSoftsuiteRoute: typeof WorkSoftsuiteRoute
   WorkIndexRoute: typeof WorkIndexRoute
@@ -123,18 +136,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/resume': {
-      id: '/resume'
-      path: '/resume'
-      fullPath: '/resume'
-      preLoaderRoute: typeof ResumeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -144,11 +150,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resume': {
+      id: '/resume'
+      path: '/resume'
+      fullPath: '/resume'
+      preLoaderRoute: typeof ResumeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/work/': {
@@ -158,11 +171,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/work/softsuite': {
-      id: '/work/softsuite'
-      path: '/work/softsuite'
-      fullPath: '/work/softsuite'
-      preLoaderRoute: typeof WorkSoftsuiteRouteImport
+    '/work/gbv': {
+      id: '/work/gbv'
+      path: '/work/gbv'
+      fullPath: '/work/gbv'
+      preLoaderRoute: typeof WorkGbvRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/work/lawma': {
@@ -170,6 +183,13 @@ declare module '@tanstack/react-router' {
       path: '/work/lawma'
       fullPath: '/work/lawma'
       preLoaderRoute: typeof WorkLawmaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work/softsuite': {
+      id: '/work/softsuite'
+      path: '/work/softsuite'
+      fullPath: '/work/softsuite'
+      preLoaderRoute: typeof WorkSoftsuiteRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -180,6 +200,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   ResumeRoute: ResumeRoute,
+  WorkGbvRoute: WorkGbvRoute,
   WorkLawmaRoute: WorkLawmaRoute,
   WorkSoftsuiteRoute: WorkSoftsuiteRoute,
   WorkIndexRoute: WorkIndexRoute,

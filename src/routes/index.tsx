@@ -45,6 +45,14 @@ const featured = [
     metric: "20% fewer bugs at launch",
     year: "2023–2024",
   },
+  {
+    slug: "gbv",
+    kicker: "03 / SOCIAL IMPACT · MOBILE",
+    title: "GBV Tete-a-Tete",
+    blurb: "Managed CEWHIN’s second build for Android and iOS — improving chat reliability and accessibility through discovery with users, including a visually impaired GBV advocate.",
+    metric: "Accessibility-informed delivery",
+    year: "Version 2",
+  },
 ] as const;
 
 function Home() {
@@ -104,7 +112,7 @@ function Home() {
           <div>
             <p className="kicker">Selected work</p>
             <h2 className="mt-4 font-display text-4xl text-foreground md:text-5xl">
-              Two products, real users, real numbers.
+              Real products, real users, meaningful outcomes.
             </h2>
           </div>
           <Link
@@ -119,7 +127,7 @@ function Home() {
           {featured.map((f, i) => (
             <Reveal key={f.slug} delay={i * 0.08}>
               <Link
-                to={f.slug === "lawma" ? "/work/lawma" : "/work/softsuite"}
+                to={f.slug === "lawma" ? "/work/lawma" : f.slug === "softsuite" ? "/work/softsuite" : "/work/gbv"}
                 aria-label={`Read ${f.title} case study`}
                 className="group block border-t border-border pt-10"
               >
