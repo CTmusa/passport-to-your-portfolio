@@ -10,7 +10,7 @@ export const Route = createFileRoute("/work/lawma")({
       {
         name: "description",
         content:
-          "How I owned the Lagos State Waste Management Authority billing platform end-to-end — pilot launch that generated ₦20M+ in three months and enumerated 300+ facilities.",
+          "How Claudia's product work supported over ₦500M in automated billing revenue across 1,000+ facilities on the LAWMA billing application.",
       },
       { property: "og:title", content: "LAWMA Billing & Enumeration — Case Study" },
       {
@@ -34,11 +34,10 @@ const problems = [
 ];
 
 const outcomes = [
-  { k: "₦20M+", v: "Revenue generated in the first 3 months of the pilot." },
-  { k: "300+", v: "Facilities enumerated to power accurate automated billing." },
-  { k: "15+", v: "LAWMA staff, regional heads, and PSP owners trained on the admin." },
-  { k: "50%", v: "Reduction in manual billing cost and delay after automation." },
-  { k: "3", v: "PSPs onboarded in the pilot launch." },
+  { k: "₦500M+", v: "Automated billing revenue supported on the platform." },
+  { k: "1,000+", v: "Facilities supported by the billing application." },
+  { k: "50+", v: "Private Sector Partners managed on the platform." },
+  { k: "20%", v: "Improvement in system stability through product delivery." },
 ];
 
 function LawmaCase() {
@@ -58,16 +57,16 @@ function LawmaCase() {
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
             The Lagos State Waste Management Authority (LAWMA) collects waste for millions of
-            Lagosians through Private Sector Partners (PSPs). Their billing was manual, their
-            facility data was scattered, and revenue was slipping. I owned the product that fixed
-            it.
+            Lagosians through Private Sector Partners (PSPs). I worked on the billing application,
+            helping manage product requirements, payment flows, and delivery across more than 50
+            PSPs and 1,000+ facilities.
           </p>
         </Reveal>
 
         <Reveal delay={0.1} className="mt-12 grid grid-cols-2 gap-6 border-y border-border/60 py-8 text-sm md:grid-cols-4">
           {[
             ["Role", "Product Manager"],
-            ["Timeline", "2023 – 2024"],
+            ["Timeline", "Oct 2023 – Present"],
             ["Team", "Consultants, Design, Eng, Ops"],
             ["Launched", "April 2024"],
           ].map(([k, v]) => (
@@ -146,7 +145,7 @@ function LawmaCase() {
         <Reveal>
           <p className="kicker">My role & process</p>
           <h2 className="mt-4 font-display text-3xl text-foreground md:text-4xl">
-            End-to-end product ownership — from stakeholder sessions to launch training.
+            Product discovery, requirements, and delivery across the billing experience.
           </h2>
         </Reveal>
         <div className="mt-10 space-y-6">
@@ -165,11 +164,11 @@ function LawmaCase() {
             },
             {
               h: "Redevelopment of the Enumeration Portal.",
-              b: "Led the rebuild that let field teams enumerate 300+ facilities and feed clean data into the billing engine.",
+              b: "Defined and refined product requirements for facility records, payments, and reporting across more than 1,000 facilities.",
             },
             {
               h: "QA, training, and adoption after launch.",
-              b: "Ran functional testing to reduce bugs, wrote the user manual, and trained 15+ finance staff, regional heads, and PSP owners on the admin — so adoption stuck after the launch celebration ended.",
+              b: "Worked with engineering, design, and stakeholders to clarify requirements, prioritize features, test functionality, and document errors — contributing to a 20% improvement in system stability.",
             },
           ].map((step, i) => (
             <Reveal
@@ -218,13 +217,13 @@ function LawmaCase() {
         <Reveal>
           <p className="kicker">Reflection</p>
           <h2 className="mt-4 max-w-3xl font-display text-3xl leading-tight text-foreground md:text-4xl">
-            The launch worked because the training worked.
+            Better payment flows start with understanding the people behind them.
           </h2>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-            What I'd tell another PM taking on public-sector SaaS: the platform is only half the
-            product. The other half is the training, the manual, and the trust you build with the
-            people who have to defend it in a boardroom. If I ran this again I'd start adoption
-            work in parallel with sprint one, not on launch week.
+            This work reinforced the value of listening closely to users and stakeholders, then
+            translating what I learned into clear requirements. Small details — like how a payment
+            is identified and allocated — can make the difference between a system that works in
+            theory and one people can rely on every day.
           </p>
         </Reveal>
 

@@ -95,7 +95,8 @@ function About() {
 
         <Reveal delay={0.1} className="space-y-6 text-lg leading-relaxed text-muted-foreground">
           <p>
-            I'm a Product Manager with over a year in SaaS, and I look for the same thing in every
+            I'm a Product Manager with 3 years of experience building and improving B2B SaaS
+            products, and I look for the same thing in every
             team I join: people who genuinely care about their users, and put them at the heart of
             what they do. That care is where good product work starts for me.
           </p>
@@ -116,7 +117,7 @@ function About() {
           <div className="grid gap-6 border-t border-border/60 pt-10 md:grid-cols-3">
             {[
               { k: "3+ yrs", v: "in communications & community" },
-              { k: "1+ yr", v: "in SaaS product management" },
+              { k: "3 yrs", v: "in Product Management" },
               { k: "15+", v: "staff & PSPs trained hands-on" },
             ].map((s) => (
               <div key={s.k}>

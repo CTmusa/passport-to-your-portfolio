@@ -11,7 +11,7 @@ export const Route = createFileRoute("/resume")({
       {
         name: "description",
         content:
-          "Résumé and experience summary for Claudia Musa — Product Manager with over a year in SaaS and three years in communications & community development.",
+          "Résumé and experience summary for Claudia Musa — Product Manager with 3 years building and improving B2B SaaS products.",
       },
       { property: "og:title", content: "Résumé — Claudia Musa" },
       {
@@ -28,33 +28,32 @@ export const Route = createFileRoute("/resume")({
 const experience = [
   {
     role: "Product Manager",
-    company: "LAWMA (Lagos State Waste Management Authority)",
-    period: "2023 – Present",
+    company: "Soft Alliance & Resources Ltd — SaaS",
+    period: "Apr 2024 – Present",
     points: [
-      "Owned the LAWMA billing platform end-to-end; pilot launched April 2024 with three PSPs, generating ₦20M+ in the first three months.",
-      "Led redevelopment of the Enumeration Portal, enabling accurate data capture for 300+ facilities.",
-      "Coordinated delivery of the LAWMA Customer Portal MVP ('Pay Without Sign-In').",
-      "Trained 15+ finance staff, regional heads, and PSP owners on admin operations.",
-      "Reduced manual billing cost and delay by 50% via automation.",
+      "Led user research for the LAWMA billing application and translated findings into PRDs and wireframes.",
+      "Supported ₦500M+ in automated billing revenue across 50+ PSPs and 1,000+ facilities.",
+      "Defined product requirements for facility virtual accounts, payment tracking, SMS payment narration, and settlement flows.",
+      "Partnered with engineering, design, and stakeholders to prioritize features, test functionality, and document issues, contributing to a 20% improvement in system stability.",
     ],
   },
   {
-    role: "Associate Product Manager",
-    company: "SoftSUITE (HR SaaS)",
-    period: "2023 – 2024",
+    role: "Product Manager Intern",
+    company: "Soft Alliance & Resources Ltd",
+    period: "Oct 2023 – Apr 2024",
     points: [
-      "Contributed to research and prototyping that led to the go-live of SoftSUITE NOVO.",
-      "Cut product bugs by 20% through structured functional testing.",
-      "Drafted admin-facing sections of the user manual for HR leads.",
-      "Facilitated daily standups and backlog grooming to keep sprints predictable.",
+      "Created PRDs, user stories, and acceptance criteria for MVP features across SoftSUITE HR and the LAWMA application, supporting two product launches.",
+      "Conducted competitive and market analysis to inform feature prioritization and roadmap discussions.",
+      "Supported sprint planning, backlog grooming, and cross-functional coordination using GoodDay.",
     ],
   },
   {
-    role: "Communications & Community Development",
-    company: "Prior roles",
-    period: "3+ years",
+    role: "Media & Publicity Officer",
+    company: "Kwara State Internal Revenue Service",
+    period: "Apr 2019 – Oct 2021",
     points: [
-      "Led communications programs and community initiatives that shaped the empathy-first PM approach I bring to product today.",
+      "Delivered 20+ radio episodes and supported the inaugural Tax Club Quiz Competition.",
+      "Captured media content for 50+ events and analyzed audience feedback to identify service improvements.",
     ],
   },
 ];
@@ -62,18 +61,15 @@ const experience = [
 const skills = {
   Product: ["Discovery", "PRD writing", "User stories", "Roadmapping", "Prioritization (MoSCoW, RICE)"],
   Delivery: ["Scrum facilitation", "Backlog grooming", "Functional QA", "Release management"],
-  Tools: ["Jira", "GoodDay", "Trello", "Miro", "Whimsical", "Draw.io", "Lucidchart", "Google Suite", "Canva"],
-  Soft: ["Stakeholder engagement", "Cross-functional collaboration", "User research", "Communication", "Leadership"],
+  Tools: ["Jira", "GoodDay", "Miro", "Lucidchart", "Draw.io", "Whimsical", "Google Workspace", "Slack", "Trello", "Postman", "Lovable"],
+  Soft: ["Stakeholder engagement", "Cross-functional collaboration", "User research", "Communication", "Problem solving", "Team leadership"],
 };
 
 const certs = [
   "Product Discovery Micro-Certification (PDC)™ — Product School",
   "Product Strategy Micro-Certification (PSC)™ — Product School",
-  "Product Management + Agile Product Owner + Scrum — Udemy",
-  "Product Management Bootcamp — Women Techsters",
-  "FSI Software Testing Training",
-  "Treford Fintech Masterclass",
-  "CAWSTEM M.A.T.C.H Mentorship Program",
+  "Agile Product Owner & Scrum — Udemy (2024)",
+  "Business Analysis Fundamentals (CBAP Training) (2025)",
 ];
 
 function Resume() {
@@ -92,7 +88,7 @@ function Resume() {
             </p>
           </div>
           <a
-            href="/Claudia_T_Musa_Portfolio.pdf"
+            href="/assets-v1/f8e0e354-2a8e-4613-9854-9acbfc2c7a05/Claudia_T_Musa_CV.pdf"
             aria-label="Open or download Claudia Musa’s résumé PDF (opens in a new tab)"
             target="_blank"
             rel="noopener noreferrer"
@@ -128,10 +124,10 @@ function Resume() {
           <div className="mt-8 grid gap-8 md:grid-cols-[200px_1fr]">
             <p className="kicker">Summary</p>
             <p className="text-foreground leading-relaxed">
-              Product Manager with 1+ year in SaaS and 3+ years in communications and community
-              development. I ship user-centric products, communicate exceptionally with
-              stakeholders, and deliver measurable outcomes — from ₦20M+ pilot revenue to 50%
-              billing-cost reduction.
+              Product Manager with 3 years of experience building and improving B2B SaaS products.
+              Experienced in customer discovery, translating user and business needs into clear
+              product requirements, and collaborating across teams to deliver valuable products —
+              including a billing application supporting 1,000+ facilities and over ₦500M in revenue.
             </p>
           </div>
 

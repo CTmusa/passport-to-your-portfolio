@@ -32,8 +32,8 @@ const featured = [
     kicker: "01 / GOVTECH · SAAS",
     title: "LAWMA Billing & Enumeration",
     blurb:
-      "Owned and launched the automated billing platform for Lagos State's waste authority — turning three pilot PSPs into ₦20M+ in the first three months.",
-    metric: "₦20M+ in 3 months",
+      "Led product work on LAWMA's billing application, supporting over ₦500M in automated billing revenue across 50+ PSPs and 1,000+ facilities.",
+    metric: "₦500M+ in revenue",
     year: "2024",
   },
   {
@@ -68,8 +68,8 @@ function Home() {
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground">
               I'm Claudia — a Product Manager with a foundation in communications and community
-              development. I've spent the last year shipping SaaS in Nigeria's public and private
-              sectors, working across governments, HR teams, and hundreds of real customers.
+              development. I've spent 3 years building and improving B2B SaaS products, working
+              across public and private sectors to solve real customer problems.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link
@@ -93,9 +93,9 @@ function Home() {
         <div className="border-y border-border/60 bg-background">
           <div className="mx-auto grid max-w-6xl grid-cols-1 divide-y divide-border/60 px-6 md:grid-cols-3 md:divide-x md:divide-y-0 md:px-10">
             {[
-              { k: "₦20M+", v: "Revenue in the first 3 months" },
-              { k: "300+", v: "Facilities enumerated" },
-              { k: "50%", v: "Billing cost cut" },
+              { k: "₦500M+", v: "Automated billing revenue" },
+              { k: "1,000+", v: "Facilities supported" },
+              { k: "20%", v: "Improvement in system stability" },
             ].map((m) => (
               <div key={m.k} className="px-4 py-8 md:px-6 md:py-10">
                 <p className="font-display text-3xl text-foreground md:text-4xl">{m.k}</p>
