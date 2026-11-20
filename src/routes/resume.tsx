@@ -92,6 +92,7 @@ function Resume() {
             aria-label="Open or download Claudia Musa’s résumé PDF (opens in a new tab)"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => window.__lovableEvents?.track?.("project.resume_pdf_opened")}
             className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm text-background transition-colors hover:bg-accent"
           >
             <Download className="size-4" /> Open / Download PDF

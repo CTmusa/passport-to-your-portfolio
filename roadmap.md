@@ -4,3 +4,4 @@
 - [x] Update the home-page approach in Claudia's voice.
 - [x] Verify all pages and keyboard flows.
 - [x] Add the newly supplied project summary to the portfolio; screenshots will follow separately.
+- [x] Track résumé PDF opens in the analytics event catalog.

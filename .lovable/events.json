@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "events": {
+    "project.resume_pdf_opened": {
+      "event_schema_version": 1,
+      "description": "A visitor opens the résumé PDF from the résumé page.",
+      "privacy": {
+        "contains_pii": false,
+        "purpose": "product_analytics"
+      },
+      "properties_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      }
+    }
+  }
+}
