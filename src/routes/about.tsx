@@ -116,7 +116,7 @@ function About() {
 
           <div className="grid gap-6 border-t border-border/60 pt-10 md:grid-cols-3">
             {[
-              { k: "3+ yrs", v: "in communications & community" },
+              { k: "", v: "" },
               { k: "3 yrs", v: "in Product Management" },
               { k: "15+", v: "staff & PSPs trained hands-on" },
             ].map((s) => (
