@@ -29,8 +29,8 @@ export const Route = createFileRoute("/about")({
 
 const skills = {
   Technical: [
-    "Agile / Scrum (planning, grooming, retros)",
-    "GoodDay, Jira, Trello",
+    "Agile / Scrum (planning, groomi)",
+    "GoodDay, Jira, Trello, Lovable, Claude AI, ChatGPT",
     "Miro, Whimsical, Draw.io, Lucidchart, Visio",
     "PRDs & user story writing",
     "Basic API testing",
@@ -102,10 +102,10 @@ function About() {
           </p>
           <p>
             It shapes how I work. I start with the why, think holistically about the experience,
-            then bring solutions to life side by side with designers, engineers, and stakeholders —
+            then bring solutions to life side by side with designers, engineers, and stakeholders;
             so what we ship creates real value for users and for the business. I write and speak so
             that non-technical stakeholders stay in the loop, and I stay calm when a sprint takes an
-            unexpected turn. My goal isn't shipping features — it's shipping outcomes we can measure
+            unexpected turn. My goal isn't shipping features; it's shipping outcomes we can measure
             and defend.
           </p>
           <p>
@@ -118,7 +118,7 @@ function About() {
             {[
               { k: "", v: "" },
               { k: "3 yrs", v: "in Product Management" },
-              { k: "15+", v: "staff & PSPs trained hands-on" },
+              { k: "", v: "" },
             ].map((s) => (
               <div key={s.k}>
                 <p className="font-display text-3xl text-foreground">{s.k}</p>
