@@ -32,7 +32,7 @@ const cases = [
     kicker: "GovTech · Billing SaaS · 2024",
     title: "LAWMA Billing & Enumeration",
     blurb:
-      "Led product work on the LAWMA billing application — translating user and business needs into requirements and payment flows, supporting ₦500M+ in automated billing revenue across 1,000+ facilities.",
+      "Led product work on the LAWMA billing application; translating user and business needs into requirements and payment flows, supporting ₦500M+ in automated billing revenue across 1,000+ facilities.",
     metrics: ["₦500M+ revenue", "1,000+ facilities", "50+ PSPs"],
     accent: "from-terracotta/80 via-terracotta/40 to-sand",
   },
@@ -42,8 +42,8 @@ const cases = [
     kicker: "HR Tech · SaaS · 2023–2024",
     title: "SoftSuite HR — NOVO",
     blurb:
-      "Contributed to research, prototyping, and functional testing for an all-in-one HR platform. Wrote the admin manual, ran discovery sessions, and helped ship SoftSUITE NOVO with 20% fewer bugs at launch.",
-    metrics: ["20% fewer bugs", "MVP shipped", "Admin manual"],
+      "Contributed to research, prototyping, and functional testing for an all-in-one HR platform. Wrote the admin manual, ran discovery sessions, and helped ship the MVP SoftSUITE NOVO.",
+    metrics: ["MVP shipped", "Admin manual"],
     accent: "from-sage/80 via-sage/40 to-sand",
   },
   {
@@ -67,9 +67,7 @@ function Work() {
             Real products. Real users. Meaningful outcomes.
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            Each case study walks through the problem, the role I played, the process, and the
-            outcomes. I've written them for hiring managers who want the short version and the
-            long one.
+            Each case study walks through the problem, the role I played, the process, and the outcomes.
           </p>
         </Reveal>
       </section>
@@ -123,14 +121,13 @@ function Work() {
 
         <Reveal className="mt-24 flex flex-col items-start justify-between gap-6 border-t border-border/60 pt-10 md:flex-row md:items-end">
           <p className="max-w-md text-sm text-muted-foreground">
-            More case studies in progress. In the meantime, my résumé has the full timeline and the
-            projects I can't publish yet.
+            {""}
           </p>
           <Link
             to="/resume"
             className="inline-flex items-center gap-2 text-sm text-foreground underline underline-offset-4 hover:text-accent hover:no-underline"
           >
-            View résumé →
+            {""}
           </Link>
         </Reveal>
       </section>

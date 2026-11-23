@@ -220,10 +220,7 @@ function LawmaCase() {
             Better payment flows start with understanding the people behind them.
           </h2>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-            This work reinforced the value of listening closely to users and stakeholders, then
-            translating what I learned into clear requirements. Small details — like how a payment
-            is identified and allocated — can make the difference between a system that works in
-            theory and one people can rely on every day.
+            This work reinforced the value of listening closely to users and stakeholders, then translating what I learned into clear requirements. Small details; like how a payment is identified and settled can make the difference between a system that works in theory and one people can rely on every day.
           </p>
         </Reveal>
 

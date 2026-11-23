@@ -41,7 +41,7 @@ function Contact() {
           Let's build something worth measuring.
         </h1>
         <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground">
-          I'm open to Product Manager roles — full-time, contract, or advisory. I reply to
+          I'm open to Product Manager roles: full-time and contract. I reply to
           every message that isn't a cold sales pitch. If you have a product that needs sharper
           focus, tell me about it.
         </p>
@@ -56,7 +56,7 @@ function Contact() {
         </a>
 
         <p className="mt-6 text-sm text-muted-foreground">
-          Typical response time: within two business days.
+          Typical response time: within 1 business day.
         </p>
       </Reveal>
 

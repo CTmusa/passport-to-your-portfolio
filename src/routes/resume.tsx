@@ -81,7 +81,7 @@ function Resume() {
           <div>
             <p className="kicker">Résumé</p>
             <h1 className="mt-4 font-display text-5xl leading-tight text-foreground md:text-6xl">
-              The one-page version.
+              My Resume
             </h1>
             <p className="mt-4 max-w-xl text-muted-foreground">
               Read the highlights below, or open the full PDF — it opens in a new tab and downloads fine from there.
