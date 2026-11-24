@@ -57,7 +57,7 @@ function SoftSuiteCase() {
 
         <Reveal delay={0.1} className="mt-12 grid grid-cols-2 gap-6 border-y border-border/60 py-8 text-sm md:grid-cols-4">
           {[
-            ["Role", "Associate Product Manager"],
+            ["Role", "Intern Product Manager"],
             ["Product", "SoftSUITE NOVO"],
             ["Focus", "Research · Prototyping · QA"],
             ["Sector", "HR Tech · B2B SaaS"],
