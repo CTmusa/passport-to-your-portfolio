@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowUpRight, ExternalLink, ClipboardList, Wrench, FileWarning, Users } from "lucide-react";
 import { Reveal } from "../components/site/Reveal";
+import lawmaBillingLogin from "../assets/lawma-billing-login.png.asset.json";
 
 export const Route = createFileRoute("/work/lawma")({
   head: () => ({
@@ -87,6 +88,24 @@ function LawmaCase() {
           >
             Visit the live product <ExternalLink className="size-3.5" />
           </a>
+        </Reveal>
+      </section>
+
+      <section
+        aria-label="LAWMA billing application image"
+        className="mx-auto max-w-5xl px-6 pt-12 md:px-10"
+      >
+        <Reveal>
+          <figure>
+            <img
+              src={lawmaBillingLogin.url}
+              alt="LAWMA billing application login page with email and password fields and an orange login button."
+              className="h-auto w-full rounded-lg border border-border/60"
+            />
+            <figcaption className="mt-3 text-sm text-muted-foreground">
+              LAWMA billing application — sign-in screen
+            </figcaption>
+          </figure>
         </Reveal>
       </section>
 
