@@ -49,7 +49,7 @@ function SoftSuiteCase() {
             SoftSuite HR — building an all-in-one HR platform.
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-            SoftSUITE is a human capital management platform for organizations of every size — from
+            SoftSUITE is a human capital management platform for organizations of every size: from
             people management to recruitment to employee self-service. I joined the product team
             during the build-out of SoftSUITE NOVO.
           </p>
