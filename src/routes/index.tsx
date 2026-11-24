@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { Reveal } from "../components/site/Reveal";
+import lawmaBillingLogin from "../assets/lawma-billing-login.png.asset.json";
+import softsuiteAccountSetup from "../assets/softsuite-account-setup.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -34,6 +36,8 @@ const featured = [
     blurb:
       "Led product work on LAWMA's billing application, supporting over ₦500M in automated billing revenue across 50+ PSPs and 1,000+ facilities.",
     metric: "₦500M+ in revenue",
+    image: lawmaBillingLogin.url,
+    imageAlt: "LAWMA billing application sign-in screen.",
     year: "2024",
   },
   {
@@ -43,6 +47,8 @@ const featured = [
     blurb:
       "Contributed to research, prototyping, and QA for an all-in-one HR platform — reducing bugs by 20% and shipping the launch of SoftSUITE NOVO.",
     metric: "20% fewer bugs at launch",
+    image: softsuiteAccountSetup.url,
+    imageAlt: "SoftSUITE NOVO account setup screen.",
     year: "2023–2024",
   },
   {
@@ -51,6 +57,8 @@ const featured = [
     title: "GBV Tete-a-Tete",
     blurb: "Managed CEWHIN’s second build for Android and iOS — improving chat reliability and accessibility through discovery with users, including a visually impaired GBV advocate.",
     metric: "Accessibility-informed delivery",
+    image: null,
+    imageAlt: "",
     year: "Version 2",
   },
 ] as const;
@@ -137,21 +145,32 @@ function Home() {
                     <p className="mt-3 text-sm text-muted-foreground">{f.year}</p>
                   </div>
                   <div>
-                    <h3 className="font-display text-3xl leading-tight text-foreground transition-colors group-hover:text-accent md:text-5xl">
-                      {f.title}
-                    </h3>
-                    <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                      {f.blurb}
-                    </p>
-                    <div className="mt-6 flex flex-wrap items-center gap-6">
-                      <span className="inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-1.5 text-sm text-foreground">
-                        <span className="size-1.5 rounded-full bg-accent" />
-                        {f.metric}
-                      </span>
-                      <span className="inline-flex items-center gap-1 text-sm text-accent">
-                        Read case study
-                        <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                      </span>
+                    <div className={f.image ? "grid gap-6 md:grid-cols-[1fr_1.2fr] md:items-start" : ""}>
+                      {f.image ? (
+                        <img
+                          src={f.image}
+                          alt={f.imageAlt}
+                          className="aspect-[2/1] w-full rounded-lg border border-border/60 bg-secondary object-contain"
+                        />
+                      ) : null}
+                      <div>
+                        <h3 className="font-display text-3xl leading-tight text-foreground transition-colors group-hover:text-accent md:text-5xl">
+                          {f.title}
+                        </h3>
+                        <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
+                          {f.blurb}
+                        </p>
+                        <div className="mt-6 flex flex-wrap items-center gap-6">
+                          <span className="inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-1.5 text-sm text-foreground">
+                            <span className="size-1.5 rounded-full bg-accent" />
+                            {f.metric}
+                          </span>
+                          <span className="inline-flex items-center gap-1 text-sm text-accent">
+                            Read case study
+                            <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                          </span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { Reveal } from "../components/site/Reveal";
+import lawmaBillingLogin from "../assets/lawma-billing-login.png.asset.json";
+import softsuiteAccountSetup from "../assets/softsuite-account-setup.png.asset.json";
 
 export const Route = createFileRoute("/work/")({
   head: () => ({
@@ -34,6 +36,8 @@ const cases = [
     blurb:
       "Led product work on the LAWMA billing application; translating user and business needs into requirements and payment flows, supporting ₦500M+ in automated billing revenue across 1,000+ facilities.",
     metrics: ["₦500M+ revenue", "1,000+ facilities", "50+ PSPs"],
+    image: lawmaBillingLogin.url,
+    imageAlt: "LAWMA billing application sign-in screen.",
     accent: "from-terracotta/80 via-terracotta/40 to-sand",
   },
   {
@@ -44,6 +48,8 @@ const cases = [
     blurb:
       "Contributed to research, prototyping, and functional testing for an all-in-one HR platform. Wrote the admin manual, ran discovery sessions, and helped ship the MVP SoftSUITE NOVO.",
     metrics: ["MVP shipped", "Admin manual"],
+    image: softsuiteAccountSetup.url,
+    imageAlt: "SoftSUITE NOVO account setup screen.",
     accent: "from-sage/80 via-sage/40 to-sand",
   },
   {
@@ -53,6 +59,8 @@ const cases = [
     title: "GBV Tete-a-Tete",
     blurb: "Managed the second build of CEWHIN’s GBV-support platform, translating user discovery into accessibility improvements, more reliable chat, and coordinated delivery for Android and iOS.",
     metrics: ["Android & iOS", "Screen-reader support", "Chat improvements"],
+    image: null,
+    imageAlt: "",
     accent: "from-sage/80 via-sage/40 to-sand",
   },
 ] as const;
@@ -83,12 +91,22 @@ function Work() {
               >
                 <div className="grid md:grid-cols-[1.1fr_1.4fr]">
                   <div
-                    className={`relative flex aspect-[4/3] items-end bg-gradient-to-br p-8 md:aspect-auto md:p-10 ${c.accent}`}
+                    className={`relative flex aspect-[4/3] items-end overflow-hidden bg-gradient-to-br p-8 md:aspect-auto md:p-10 ${c.accent}`}
                   >
-                    <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)", backgroundSize: "18px 18px" }} />
-                    <p aria-hidden="true" className="relative font-display text-[6rem] leading-none text-background/80 md:text-[9rem]">
-                      {c.n}
-                    </p>
+                    {c.image ? (
+                      <img
+                        src={c.image}
+                        alt={c.imageAlt}
+                        className="absolute inset-0 size-full bg-secondary object-contain"
+                      />
+                    ) : (
+                      <>
+                        <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)", backgroundSize: "18px 18px" }} />
+                        <p aria-hidden="true" className="relative font-display text-[6rem] leading-none text-background/80 md:text-[9rem]">
+                          {c.n}
+                        </p>
+                      </>
+                    )}
                   </div>
                   <div className="p-8 md:p-12">
                     <p className="kicker">{c.kicker}</p>
