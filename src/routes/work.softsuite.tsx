@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowUpRight, ExternalLink } from "lucide-react";
 import { Reveal } from "../components/site/Reveal";
+import softsuiteAccountSetup from "../assets/softsuite-account-setup.png.asset.json";
 
 export const Route = createFileRoute("/work/softsuite")({
   head: () => ({
@@ -79,6 +80,24 @@ function SoftSuiteCase() {
           >
             Visit the live product <ExternalLink className="size-3.5" />
           </a>
+        </Reveal>
+      </section>
+
+      <section
+        aria-label="SoftSuite HR product image"
+        className="mx-auto max-w-5xl px-6 pt-12 md:px-10"
+      >
+        <Reveal>
+          <figure>
+            <img
+              src={softsuiteAccountSetup.url}
+              alt="SoftSUITE account setup page showing company email, phone number, password, and confirmation fields alongside three signup steps."
+              className="h-auto w-full rounded-lg border border-border/60"
+            />
+            <figcaption className="mt-3 text-sm text-muted-foreground">
+              SoftSUITE NOVO account setup flow
+            </figcaption>
+          </figure>
         </Reveal>
       </section>
 
